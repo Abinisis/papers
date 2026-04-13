@@ -10,7 +10,7 @@ img_path = os.path.join(BASE_DIR, "photo.jpg")
 
 img = Image.open(img_path).convert("RGBA")
 st.image(img, width=120)
-
+st.image(make_circle("photo.jpg"), width=120)
 # ---- HEADER (bigger + slightly left) ----
 st.markdown(
     """
