@@ -1,16 +1,24 @@
 import streamlit as st
+
 # ---- HEADER (bigger + slightly left) ----
-st.markdown(
-    <div style="
-        text-align: left;
-        font-size: 34px;
-        font-weight: 700;
-        margin-left: 40px;
-        margin-bottom: 0px;
-        letter-spacing: 1px;
-    ">
-    📚 ARTICLES & PAPERS
-    st.caption("by G. Buonano")
+st.markdown("""
+<div style="
+    text-align: left;
+    font-size: 34px;
+    font-weight: 700;
+    margin-left: 40px;
+    margin-bottom: 0px;
+    letter-spacing: 1px;
+">
+    My Header
+</div>
+""", unsafe_allow_html=True)
+
+# ---- TITLE ----
+st.markdown("## 📚 ARTICLES & PAPERS")
+
+# ---- CAPTION ----
+st.caption("by G. Buonano")
 
 search_query = st.text_input("Search your article here")
 
