@@ -11,21 +11,6 @@ st.markdown(
         letter-spacing: 1px;
     ">
     📚 ARTICLES & PAPERS
-    </div>
-    """,
-    unsafe_allow_html=True
-)
-
-st.markdown(
-    "<div style='width:80px;height:3px;background:#999;margin:6px 0 20px 40px;'></div>",
-    unsafe_allow_html=True
-)
-
-# ---- IMAGE + AUTHOR ----
-col1, col2, col3 = st.columns([1, 2, 1])
-
-with col2:
-    st.image(make_circle("photo.jpg"), width=120)
     st.caption("by G. Buonano")
 
 search_query = st.text_input("Search your article here")
