@@ -1,22 +1,4 @@
 import streamlit as st
-from PIL import Image, ImageDraw
-
-# ---- circular image ----
-from PIL import Image, ImageDraw
-
-def make_circle(image_path):
-    img = Image.open(image_path).convert("RGB")
-    size = (min(img.size),) * 2
-
-    mask = Image.new("L", size, 0)
-    draw = ImageDraw.Draw(mask)
-    draw.ellipse((0, 0) + size, fill=255)
-
-    img = img.resize(size)
-    output = Image.new("RGB", size)
-    output.paste(img, mask=mask)
-
-    return output
 # ---- HEADER (bigger + slightly left) ----
 st.markdown(
     """
