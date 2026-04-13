@@ -1,7 +1,6 @@
 import streamlit as st
 # ---- HEADER (bigger + slightly left) ----
 st.markdown(
-    """
     <div style="
         text-align: left;
         font-size: 34px;
