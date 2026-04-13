@@ -10,7 +10,6 @@ st.markdown("""
     margin-bottom: 0px;
     letter-spacing: 1px;
 ">
-    My Header
 </div>
 """, unsafe_allow_html=True)
 
