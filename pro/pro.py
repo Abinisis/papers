@@ -2,17 +2,14 @@ import streamlit as st
 from PIL import Image, ImageDraw
 
 # ---- circular image ----
-def make_circle(img_path):
-    img = Image.open(img_path).convert("RGBA")
-    size = (120, 120)
-    img = img.resize(size)
+import os
+from PIL import Image
 
-    mask = Image.new("L", size, 0)
-    draw = ImageDraw.Draw(mask)
-    draw.ellipse((0, 0, 120, 120), fill=255)
+BASE_DIR = os.path.dirname(__file__)
+img_path = os.path.join(BASE_DIR, "photo.jpg")
 
-    img.putalpha(mask)
-    return img
+img = Image.open(img_path).convert("RGBA")
+st.image(img, width=120)
 
 # ---- HEADER (bigger + slightly left) ----
 st.markdown(
